@@ -1,8 +1,22 @@
 \documentclass{article}
 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
+% \usepackage{lineno}
+% \linenumbers
 
+\newcommand{\median}{\operatorname{median}}
+
+% http://bytesizebio.net/2013/03/11/adding-supplementary-tables-and-figures-in-latex/
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
 
 \hyphenation{Ge-nome Ge-nomes hyper-mut-ation through-put}
 
@@ -17,7 +31,7 @@ Abstract here.
 \end{abstract}
 
 
-\section{Introduction}
+\section*{Introduction}
 \cite{Felsenstein1981-zs}
 
 % \begin{figure}[h]
@@ -32,5 +46,12 @@ Abstract here.
 
 \bibliographystyle{plain}
 \bibliography{main}
+
+
+% \clearpage
+% \section*{Supplementary Materials}
+% \beginsupplement
+% Supplementary text and figures here.
+
 
 \end{document}
