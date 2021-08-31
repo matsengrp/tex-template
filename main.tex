@@ -1,6 +1,26 @@
 \documentclass{article}
 
-\usepackage{amsmath}
+%%%% Patch to make lineno work nicely with amsmath
+% https://tex.stackexchange.com/a/461192
+\usepackage{lineno}
+\usepackage{amsmath}  %% <- after lineno
+\usepackage{etoolbox} %% <- for \cspreto, \csappto
+%% Patch 'normal' math environments:
+\newcommand*\linenomathpatch[1]{%
+  \cspreto{#1}{\linenomath}%
+  \cspreto{#1*}{\linenomath}%
+  \csappto{end#1}{\endlinenomath}%
+  \csappto{end#1*}{\endlinenomath}%
+}
+\linenomathpatch{equation}
+\linenomathpatch{gather}
+\linenomathpatch{multline}
+\linenomathpatch{align}
+\linenomathpatch{alignat}
+\linenomathpatch{flalign}
+\linenumbers%
+%%%% end patching
+
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -8,8 +28,6 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[inline]{showlabels}
 \renewcommand{\showlabelfont}{\tiny\sffamily}
-\usepackage{lineno}
-\linenumbers
 
 \newtheorem{lemma}{Lemma}
 \newtheorem{prop}{Proposition}
@@ -20,6 +38,8 @@
 \newtheorem{alg}{Algorithm}
 
 \newcommand{\median}{\operatorname{median}}
+
+
 
 % http://bytesizebio.net/2013/03/11/adding-supplementary-tables-and-figures-in-latex/
 \newcommand{\beginsupplement}{%
