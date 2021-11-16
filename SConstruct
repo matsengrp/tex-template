@@ -6,7 +6,7 @@ VariantDir('_build', src_dir='.')
 env = Environment(ENV=os.environ)
 inkscape = Builder(action = 'inkscape --without-gui --export-pdf=$TARGET $SOURCE')
 env['BUILDERS']['Inkscape'] = inkscape
-env['BUILDERS']['Latexdiff'] = Builder(action = 'latexdiff $SOURCES > $TARGET')
+env['BUILDERS']['Latexdiff'] = Builder(action = 'latexdiff --floattype=FLOATSAFE --math-markup=off -t CTRADITIONAL $SOURCES > $TARGET')
 env['BUILDERS']['Copier'] = Builder(action = Copy('$TARGET', '$SOURCE'))
 
 figure_pdfs = [env.Inkscape(target="figures/" + os.path.basename(svg).replace('.svg','.pdf'), source=svg)
