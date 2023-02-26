@@ -6,6 +6,7 @@ VariantDir('_build', src_dir='.')
 env = Environment(ENV=os.environ)
 inkscape = Builder(action = 'inkscape --without-gui --export-pdf=$TARGET $SOURCE')
 env['BUILDERS']['Inkscape'] = inkscape
+# Maggie used this to avoid diffs in all figure and table legends: --config="PICTUREENV=(?:picture|DIFnomarkup|figure|table)[\w\d*@]*"
 env['BUILDERS']['Latexdiff'] = Builder(action = 'latexdiff --config="PICTUREENV=(?:figure|DIFnomarkup|align)[\w\d*@]*" --floattype=FLOATSAFE --math-markup=off -t CTRADITIONAL $SOURCES > $TARGET')
 env['BUILDERS']['Copier'] = Builder(action = Copy('$TARGET', '$SOURCE'))
 
