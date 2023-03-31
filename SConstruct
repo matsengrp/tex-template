@@ -18,6 +18,9 @@ pdfs = [env.Copier(target = '_build/' + os.path.basename(pdf), source = pdf)
 
 Depends(Flatten([pdfs]), Flatten([figure_pdfs]))
 
+env.Latexdiff(target='diff.tex',source=['versions/v1/main.tex','main.tex'])
+diff = env.PDF(target='diff.pdf',source='diff.tex')
+
 main=env.PDF(target='_build/main.pdf',source='main.tex')
 
 Depends(Flatten([main]),
