@@ -2,3 +2,14 @@
 _build
 *.pyc
 _ignore
+
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.suppinfo
+main.pdf
