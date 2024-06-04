@@ -39,8 +39,6 @@
 
 \newcommand{\median}{\operatorname{median}}
 
-
-
 % http://bytesizebio.net/2013/03/11/adding-supplementary-tables-and-figures-in-latex/
 \newcommand{\beginsupplement}{%
         \setcounter{table}{0}
@@ -51,28 +49,76 @@
 
 \hyphenation{Ge-nome Ge-nomes hyper-mut-ation through-put}
 
-\title{Template}
+% template follows "Ten simple rules for structuring papers" http://dx.doi.org/10.1371/journal.pcbi.1005619
+
+\title{Focus your paper on a central contribution, and communicate that in the title}
 \author{You}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}
-Abstract here.
+% The one question is:
+% Here we... (describe approach)
+% What we found
+% How it matters
 \end{abstract}
 
 
 \section*{Introduction}
+% At least one paragraph for each of the following prompts.
+
+% Describe the big problem in science we are approaching here.
+
+% What does the field know about this problem?
+
+% What is the remaining gap?
+
+% In this paper, we... (Describe approach)
+
+% We find that...
+
+
 Hooray for Joe~\cite{Felsenstein1981-zs}.
+
+% NOTE: here I'm writing a results-first paper. A methods-first paper should
+% still have a Methods overview before really getting into the details.
+\section*{Results}
+
+\subsection*{Methods overview}
+% In order to [insert research question statement] we developed a method...
+% Here we give a brief overview of how this method works; full details can be found in the Methods section.
 
 % \begin{figure}[h]
 % \centering
-% \includegraphics[width=0.35\textwidth]{figures/subsplit.pdf}
+% \includegraphics[width=0.35\textwidth]{figures/methods.pdf}
 % \caption{\
-% A subsplit structure.
+% Methods overview.
 % }%
-% \label{fig:subsplit}
+% \label{fig:overview}
 % \end{figure}
+
+
+% Now there should be a succession of section headings that are findings, such as
+% \subsection*{7 is bigger than 6 but less than 8}
+
+
+\section*{Discussion}
+
+% What we found
+
+% Putting what we found in the context of other research
+
+% Limitations
+
+% Why science is better now, and prospects for future work
+
+
+\section*{Materials and methods}
+
+\subsection*{Data}
+
+% Then whatever methods details you have.
 
 
 \bibliographystyle{plain}
