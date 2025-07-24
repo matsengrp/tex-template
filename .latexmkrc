@@ -1,5 +1,4 @@
 # LaTeX build configuration for latexmk
-# This replaces the SCons build system
 
 # PDF generation via pdflatex
 $pdf_mode = 1;  # 1 = pdflatex
@@ -17,5 +16,3 @@ $clean_ext = 'synctex.gz nav snm vrb bbl blg fls fdb_latexmk';
 
 # Settings for continuous preview mode (only when -pvc is used)
 $sleep_time = 1;               # Check for changes every 1 second
-
-# For latexdiff support, we'll handle this through the Makefile
