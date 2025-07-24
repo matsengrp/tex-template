@@ -1,0 +1,65 @@
+name: Build PDF
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Install LaTeX and dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          texlive-latex-base \
+          texlive-latex-extra \
+          texlive-fonts-recommended \
+          texlive-fonts-extra \
+          texlive-bibtex-extra \
+          biber \
+          latexmk \
+          inkscape
+    
+    - name: Build PDF figures from SVG
+      run: make pdf-figures
+    
+    - name: Build PDF
+      run: make pdf
+    
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: paper-pdf
+        path: main.pdf
+        retention-days: 30
+        if-no-files-found: error
+    
+    # Optional: Also build diff if versions/v1/main.tex exists
+    - name: Check for diff version
+      id: check_diff
+      run: |
+        if [ -f versions/v1.tex ]; then
+          echo "diff_exists=true" >> $GITHUB_OUTPUT
+        else
+          echo "diff_exists=false" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Build diff PDF
+      if: steps.check_diff.outputs.diff_exists == 'true'
+      run: make diff
+    
+    - name: Upload diff PDF artifact
+      if: steps.check_diff.outputs.diff_exists == 'true'
+      uses: actions/upload-artifact@v4
+      with:
+        name: diff-pdf
+        path: diff.pdf
+        retention-days: 30
+        if-no-files-found: warn
