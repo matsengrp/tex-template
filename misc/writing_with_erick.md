@@ -67,17 +67,17 @@ Even the Discussion can work like this: "In this paper we develop a new approach
 ### Complex strategy
 
 * Follow [this PDF](https://www.unlv.edu/sites/default/files/page_files/27/GradCollege-VerbTenseScientificManuscripts.pdf) as follows:
-  * **Title**: Use the simple present tense when a complete sentence is appropriate, to describe a conclusion supported by the manuscript (e.g., “Gene X is required for cell differentiation”).
+  * **Title**: Use the simple present tense when a complete sentence is appropriate, to describe a conclusion supported by the manuscript (e.g., "Gene X is required for cell differentiation").
   * **Abstract and Introduction**: 
-    * Use the present tense for widely accepted facts (e.g., “DNA is composed of four nucleotides”).
-    * Use the present perfect tense for previous research with current relevance (e.g., “Studies have shown”).
-    * Use the past tense when referring to specific methods from previous studies (e.g., “Smith sampled 96 swamps”).
-    * Use the present tense when describing your contribution (e.g., “In this paper, we devise”).
+    * Use the present tense for widely accepted facts (e.g., "DNA is composed of four nucleotides").
+    * Use the present perfect tense for previous research with current relevance (e.g., "Studies have shown").
+    * Use the past tense when referring to specific methods from previous studies (e.g., "Smith sampled 96 swamps").
+    * Use the present tense when describing your contribution (e.g., "In this paper, we devise").
   * **Methods**: There are two choices you can use, but be consistent.
     * If your paper is mostly about developing a new method (e.g., "We define a spurtle to be a set _X_") then use the present tense.
-    * If your paper is mostly about experiments, use the past tense (e.g., “We built 200 trees”).
-  * **Results**: Primarily use the past tense to describe completed experiments (e.g., “We detected no fluorescence”). Use the present tense when referring to the manuscript itself (e.g., “Figure 1 shows”) or defining a something (e.g., "Overlap metric is defined as"). Generally, statements that are always true should be in the present tense, while statements about something done/observed should be in the past tense.
-  * **Discussion**: Use the past tense for specific results and methods (e.g., “We observed”), the present tense for conclusions (e.g., “We conclude”), and the future tense for proposed future research (e.g., “We will investigate”).
+    * If your paper is mostly about experiments, use the past tense (e.g., "We built 200 trees").
+  * **Results**: Primarily use the past tense to describe completed experiments (e.g., "We detected no fluorescence"). Use the present tense when referring to the manuscript itself (e.g., "Figure 1 shows") or defining a something (e.g., "Overlap metric is defined as"). Generally, statements that are always true should be in the present tense, while statements about something done/observed should be in the past tense.
+  * **Discussion**: Use the past tense for specific results and methods (e.g., "We observed"), the present tense for conclusions (e.g., "We conclude"), and the future tense for proposed future research (e.g., "We will investigate").
 
 
 
@@ -88,6 +88,16 @@ Please have a look next time you are designing your figures.
 
 For cartoons, see the [Inkscape tutorial](https://github.com/fredhutchio/inkscape-tutorial) made by Erick.
 SVG should be our default line-art format.
+
+
+### Figure captions
+
+Give descriptive captions to all your figures and tables that start with a clear "headline" summarizing the key finding.
+The caption should lead with the main message, then provide supporting details.
+For example, instead of "Distribution of mutation rates across sites" write "Mutation rates vary dramatically across antibody sites, with CDRs showing 10-fold higher rates than framework regions."
+This headline approach makes figures more informative and follows the principle of leading with your strongest point.
+Note that this guidance is somewhat relaxed for supplementary figures, where the focus may be on explaining complex methodological details or providing technical information rather than highlighting a key finding.
+
 
 ### Referring to figures
 
@@ -111,6 +121,7 @@ Avoid constructions like:
 - "The results are shown in"
 
 Instead, make direct statements about your findings with parenthetical figure references.
+
 
 ### Figure design
 
@@ -136,7 +147,9 @@ mpl.rcParams.update({
 sns.despine(fig=fig, offset=10, trim=True)
 ```
 
+
 ## [Writing procrastinators, this letter is to you](https://www.nature.com/articles/s41587-025-02584-1)
+
 
 ## [Advice](https://www.mtholyoke.edu/acad/intrel/orwell46.htm) from George Orwell
 * Never use a metaphor, simile, or other figure of speech which you are used to seeing in print.
@@ -146,7 +159,7 @@ sns.despine(fig=fig, offset=10, trim=True)
 * Never use a foreign phrase, a scientific word, or a jargon word if you can think of an everyday English equivalent.
 * Break any of these rules sooner than say anything outright barbarous.
 
-Related: [Novelist Cormac McCarthy’s tips on how to write a great science paper](https://www.nature.com/articles/d41586-019-02918-5)
+Related: [Novelist Cormac McCarthy's tips on how to write a great science paper](https://www.nature.com/articles/d41586-019-02918-5)
 
 ## File layout
 * Always one sentence per line.
@@ -174,6 +187,7 @@ Related: [Novelist Cormac McCarthy’s tips on how to write a great science pape
 
 The cover letter is not to summarize the paper. That's what the paper is for. He suggested a structure with one paragraph of bashing then a paragraph contrasting this with our work, including some speculation. Then some bullet points about why the paper will be popular with various types of scientists. A more traditional take from Springer is [available here](https://www.springer.com/gp/authors-editors/authorandreviewertutorials/submitting-to-a-journal-and-peer-review/cover-letters/10285574).
 
+
 ## Writing a response to reviewers: advice from Michael Emerman
 * Overall idea: the AE should be able to just read the reviews and not the revised manuscript to understand how you responded.
 * Almost every change should have a direct reference to something new in the text.
@@ -181,7 +195,7 @@ The cover letter is not to summarize the paper. That's what the paper is for. He
 * Don't ask questions in your response (if there is uncertainty in something, just go with your best guess of what it is).
 * If the reviewer says something is unclear, then readers will likely find it unclear as well, so best to rewrite.
 * Paper citations in reviews are great.
-* Generally speaking, don't compliment the reviewers, unless they suggest someting really great.
+* Generally speaking, don't compliment the reviewers, unless they suggest something really great.
 
 [Ten simple rules for writing a response to reviewers](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005730) by Bill Noble.
 
@@ -204,7 +218,7 @@ The cover letter is not to summarize the paper. That's what the paper is for. He
 ## [Advice](http://andrewgelman.com/2014/01/14/advice-writing-research-articles/) from Andrew Gelman
 
 ### How to write a paper
-1. Start with the conclusions. Write a couple pages on what you’ve found and what you recommend. In writing these conclusions, you should also be writing some of the introduction, in that you’ll need to give enough background so that general readers can understand what you’re talking about and why they should care. But you want to start with the conclusions, because that will determine what sort of background information you’ll need to give.
+1. Start with the conclusions. Write a couple pages on what you've found and what you recommend. In writing these conclusions, you should also be writing some of the introduction, in that you'll need to give enough background so that general readers can understand what you're talking about and why they should care. But you want to start with the conclusions, because that will determine what sort of background information you'll need to give.
 
 2. Now step back. What is the principal evidence for your conclusions? Make some graphs and pull out some key numbers that represent your research findings which back up your claims.
 
@@ -214,28 +228,27 @@ The cover letter is not to summarize the paper. That's what the paper is for. He
 
 5. Moving forward one last time: go to your results and conclusions and give alternative explanations. Why might you be wrong? What are the limits of applicability of your findings? What future research would be appropriate to follow up on these loose ends?
 
-6. Write the abstract. An easy way to start is to take the first sentence from each of the first five paragraphs of the article. This probably won’t be quite right, but I bet it will be close to what you need.
+6. Write the abstract. An easy way to start is to take the first sentence from each of the first five paragraphs of the article. This probably won't be quite right, but I bet it will be close to what you need.
 
-7. Give the article to a friend, ask him or her to spend 15 minutes looking at it, then ask what they think your message was, and what evidence you have for it. Your friend should read the article as a potential consumer, not as a critic. You can find typos on your own time, but you need somebody else’s eyes to get a sense of the message you’re sending.
+7. Give the article to a friend, ask him or her to spend 15 minutes looking at it, then ask what they think your message was, and what evidence you have for it. Your friend should read the article as a potential consumer, not as a critic. You can find typos on your own time, but you need somebody else's eyes to get a sense of the message you're sending.
 
 ### Details
 
 Remove all contentless words and phrases, such as:
 
-- “Of course”
-- “Note that”
-- “Interestingly”
-- “very”
-- “nice”
-- “We can see that”
-- “It is important to note that”
+- "Of course"
+- "Note that"
+- "Interestingly"
+- "very"
+- "nice"
+- "We can see that"
+- "It is important to note that"
 
-Give descriptive captions to all your figures and tables. For example, in Figure 1, add a sentence explaining why you call this observation “extreme.” . . .
 
 ### General principles
 
-(a) Don’t write something unless you expect people to read it.
+(a) Don't write something unless you expect people to read it.
 
-(b) This principle holds for tables and figures as well. Consider Table 2. Do you want the reader to know that in line 3, Min Obs is 894? I doubt it. If so, you should make a case for this. If not, don’t put it down. When an article is filled with numbers and words that you neither expect or want people to read, this distracts them from the content. . . .
+(b) This principle holds for tables and figures as well. Consider Table 2. Do you want the reader to know that in line 3, Min Obs is 894? I doubt it. If so, you should make a case for this. If not, don't put it down. When an article is filled with numbers and words that you neither expect or want people to read, this distracts them from the content. . . .
 
-- It’s hard for me to believe that the new methods dominate the old methods. Maybe so, but I’d find the presentation more convincing if the authors gave some discussion of why the new methods work better, and—especially important—where the new methods would not be expected to perform well. . . .
+- It's hard for me to believe that the new methods dominate the old methods. Maybe so, but I'd find the presentation more convincing if the authors gave some discussion of why the new methods work better, and—especially important—where the new methods would not be expected to perform well. . . .
