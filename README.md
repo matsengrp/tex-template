@@ -58,6 +58,8 @@ The repository automatically builds PDFs on every push and pull request. You can
 2. **Download artifacts**: Click on any workflow run and download the `paper-pdf` artifact
 3. **No local LaTeX needed**: Collaborators can review PDFs without installing LaTeX
 
+PDFs are timestamped with format `{repo-name}_{YYYY-MM-DD@HH-MM}.pdf` in Pacific timezone (e.g., `tex-template_2025-08-07@14-23.pdf`).
+
 The CI uses a pre-built Docker container for fast, reliable builds.
 
 ## Development Workflow

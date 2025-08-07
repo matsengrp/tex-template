@@ -19,10 +19,16 @@ jobs:
         root_file: main.tex
         texlive_version: 2024
     
+    - name: Copy PDF with timestamped name
+      run: |
+        REPO_NAME=$(basename "$GITHUB_REPOSITORY")
+        TIMESTAMP=$(TZ='America/Los_Angeles' date +"%Y-%m-%d@%H-%M")
+        cp main.pdf "${REPO_NAME}_${TIMESTAMP}.pdf"
+    
     - name: Upload PDF artifact
       uses: actions/upload-artifact@v4
       with:
         name: paper-pdf
-        path: main.pdf
+        path: "*_*.pdf"
         retention-days: 30
         if-no-files-found: error
