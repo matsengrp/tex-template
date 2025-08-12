@@ -40,12 +40,17 @@
 \newcommand{\median}{\operatorname{median}}
 
 % http://bytesizebio.net/2013/03/11/adding-supplementary-tables-and-figures-in-latex/
+% https://tex.stackexchange.com/questions/633283/hyperlink-to-supplemental-figure-s1-links-to-figure-1-how-to-make-a-new-set-of
 \newcommand{\beginsupplement}{%
-        \setcounter{table}{0}
-        \renewcommand{\thetable}{S\arabic{table}}%
-        \setcounter{figure}{0}
-        \renewcommand{\thefigure}{S\arabic{figure}}%
-     }
+	\setcounter{table}{0}
+	\renewcommand{\thetable}{S\arabic{table}}%
+	\renewcommand{\theHtable}{S\arabic{table}}
+	\setcounter{figure}{0}
+	\renewcommand{\thefigure}{S\arabic{figure}}%
+	\renewcommand{\theHfigure}{S\arabic{figure}}
+	\setcounter{page}{1}
+	\renewcommand{\thepage}{S-\arabic{page}}%
+}
 
 \hyphenation{Ge-nome Ge-nomes hyper-mut-ation through-put}
 
