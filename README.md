@@ -31,6 +31,13 @@ This repository follows comprehensive writing guidelines documented in [`misc/wr
 - Make direct statements with parenthetical figure references
 - Follow hierarchical revision: section → paragraph → sentence → word level
 
+## Responses to reviewers
+
+When writing a response to reviewers, continue to edit the `main.tex`. 
+We will have a separate response file: either Markdown or TeX.
+
+See [Bill Noble's Ten simple rules for writing a response to reviewers](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005730) for excellent advice.
+
 ## File Organization
 
 - `main.tex` - Main document (always the most up-to-date file)
