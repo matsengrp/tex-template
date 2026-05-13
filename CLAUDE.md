@@ -23,6 +23,9 @@ make pdf-figures
 # Continuous compilation (watches for changes)
 make cont
 
+# Open PDF in viewer (Skim on macOS, Zathura on Linux) and run continuous compilation
+make auto
+
 # Generate diff against previous version
 make diff
 
@@ -71,6 +74,7 @@ This repository follows the comprehensive writing guidelines documented in `misc
 - `make pdf` - Build main PDF
 - `make pdf-figures` - Convert SVG figures to PDF
 - `make cont` - Continuous compilation mode
+- `make auto` - Open PDF in viewer and run continuous compilation (override with `PDF_VIEWER=...`)
 - `make diff` - Generate comparison with `versions/v1.tex`
 - `make clean` - Remove auxiliary files
 - `make cleanall` - Remove all generated files

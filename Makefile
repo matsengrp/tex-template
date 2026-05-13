@@ -1,7 +1,15 @@
 # Makefile wrapper for latexmk
 # Provides simple commands for common LaTeX build tasks
 
-.PHONY: all pdf pdf-figures continuous cont clean cleanall cleanfigs diff help
+# Default PDF viewer for `make auto` — override with `PDF_VIEWER=...`
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Darwin)
+    PDF_VIEWER ?= open -a Skim
+else
+    PDF_VIEWER ?= zathura
+endif
+
+.PHONY: all pdf pdf-figures continuous cont auto clean cleanall cleanfigs diff help
 
 # Default target - build the PDF
 all: pdf
@@ -25,6 +33,11 @@ pdf-figures:
 # Continuous compilation mode - watch for changes and rebuild
 continuous: cont
 cont:
+	latexmk -pvc
+
+# Open the PDF in a viewer and start continuous compilation
+auto: pdf
+	$(PDF_VIEWER) main.pdf &
 	latexmk -pvc
 
 # Clean auxiliary files (keep PDF)
@@ -60,6 +73,7 @@ help:
 	@echo "  make [pdf]      - Build the main PDF"
 	@echo "  make pdf-figures - Convert SVG figures to PDF"
 	@echo "  make cont       - Continuous compilation (watch for changes)"
+	@echo "  make auto       - Open PDF in viewer (Skim/Zathura) and run continuous compilation"
 	@echo "  make clean      - Remove auxiliary files (keep PDF)"
 	@echo "  make cleanall   - Remove all generated files including PDF"
 	@echo "  make cleanfigs  - Remove generated figure PDFs"
