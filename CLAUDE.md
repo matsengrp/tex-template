@@ -49,6 +49,28 @@ This repository follows the comprehensive writing guidelines documented in `misc
 - Make direct statements with parenthetical figure references: "Unicorns are generous (Figure 1)"
 - Avoid nominalizations and "zombie nouns" - use active voice with clear subjects and verbs
 
+### Prose self-check (run on every paragraph you draft)
+
+All eight items below fix one underlying LLM failure mode: **the main clause goes inert and
+the real content gets demoted** — into an appositive after a dash, into a subordinate clause,
+into the agent slot of a passive. Check every drafted paragraph against all eight before
+showing it.
+
+- **No clefts.** These are the worst offenders, because the subject slot becomes a placeholder. Rewrite *it is because X that Y* → *because X, Y*; *what P cannot tell us is Z* → *P cannot tell us Z*; *Z is what P cannot decide* → *P cannot decide Z*; *this is what lets us do Z* → *X lets us do Z*. Also *there is/are … that*.
+- **Every sentence names its actor.** The grammatical subject should be a thing under discussion — we, the model, the estimator, the data — not *This, That, Such a…, The consequence, Any difference*. At most one backward-pointing subject per paragraph. Prefer active voice: *almost all of it is carried by X* → *X carries almost all of it*.
+- **The topic sentence carries the claim.** A reader skimming only first sentences should get the argument.
+- **Watch inert main verbs.** *is, are, has, offers, provides, represents, constitutes* as the main verb — anywhere, not just in the topic sentence — means the real action is probably elsewhere in the sentence. Promote it. A genuine definition is fine.
+- **No setup–pivot–payoff.** If a sentence pivots on a dash, colon, or semicolon, check whether the payoff stands alone. If it does, cut the setup and let it. An em-dash pair is fine when it interrupts with a list or gloss; it is not fine as the hinge before the conclusion. Never in the topic sentence.
+- **Split long sentences.** Past roughly 40 words, or two independent clauses plus a subordinate one, split. Long sentences are where buried payoffs hide.
+- **"Not X but Y" is a smell.** State Y. Keep the contrast only when it is the point (*small, not null*).
+- **Plain register.** Prefer a plain statement to an elevated one: *the assumption has empirical warrant* → *the data support the assumption*; *organism is decisive* → *the choice of organism matters*. Cut intensifiers (*exactly, precisely, genuinely, crucially, a real X*) unless they carry technical weight. Do not editorialize about your own results (*this matters more than…*); state the finding and let it stand. Cut any sentence that restates the one before it.
+
+Two of these are mechanically checkable — `grep -c -- " --- " main.tex` for dash density, and a
+word count per line for sentence length. The rest need reading.
+
+This operationalizes `misc/writing_with_erick.md`: *have the primary noun and the primary verb
+describe the most important actor and action in that sentence.*
+
 ### Technical Requirements
 - Spell-check and read every word aloud before submission
 - Define acronyms once each in: abstract, main text, figures, and tables
