@@ -5,9 +5,10 @@ paths:
 
 # Writing prose in this repo
 
-Before drafting or revising prose here, use the `scientific-tex-editor` agent. It holds the
-operative house style and is the file that actually gets iterated on. Do not reconstruct the
-rules from memory, from this file, or from `misc/writing_with_erick.md`.
+Before drafting or revising prose here, use the `scientific-tex-editor` agent
+([source](https://github.com/matsen/bipartite/blob/main/agents/scientific-tex-editor.md)).
+It holds the operative house style and is the file that actually gets iterated on. Do not
+reconstruct the rules from memory, from this file, or from `misc/writing_with_erick.md`.
 
 These apply to every edit, whether or not that agent is invoked:
 

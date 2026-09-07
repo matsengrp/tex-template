@@ -35,8 +35,10 @@ make clean
 
 ## Writing Guidelines
 
-Prose style lives in the `scientific-tex-editor` agent (`~/.claude/agents/`, source in
-`matsen/bipartite`). Use it when drafting or revising prose, and treat it as the source of
+Prose style lives in the `scientific-tex-editor` agent, installed at `~/.claude/agents/`;
+source is
+[`agents/scientific-tex-editor.md`](https://github.com/matsen/bipartite/blob/main/agents/scientific-tex-editor.md)
+in `matsen/bipartite`. Use it when drafting or revising prose, and treat it as the source of
 truth rather than restating its rules here. Two rules hold for every edit regardless:
 
 - **One sentence per line** in TeX files, for easy reorganization and clean diffs
