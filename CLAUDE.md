@@ -42,7 +42,7 @@ in `matsen/bipartite`. Use it when drafting or revising prose, and treat it as t
 truth rather than restating its rules here. Two rules hold for every edit regardless:
 
 - **One sentence per line** in TeX files, for easy reorganization and clean diffs
-- **Never use em-dashes (`---`)** in the manuscript
+- **Use an em-dash only when every alternative is less elegant** (machine-written prose overuses them)
 
 `misc/writing_with_erick.md` and the [wiki page](https://github.com/matsengrp/wiki/wiki/writing_with_erick)
 it was copied from are background reading. They are not kept in sync, and they are not the
@@ -78,6 +78,6 @@ The repository automatically builds PDFs on push/PR and uploads them as artifact
 
 `%` comments tagged with author initials (e.g. `%XY`, `%AB`) are reviewer or collaborator feedback. Each set of initials identifies the author of that comment.
 
-**Only the current user's own initialed comments may be edited or deleted, and only at their direction.** Any `%<initials>` comment authored by anyone else must be preserved verbatim across edits, even when the surrounding text is rewritten or the concern raised has been addressed in the new prose. Addressing a concern is not the same as having permission to delete the marker. The comment captures review history the original author still needs to see.
+**Never remove or modify an initialed comment yourself.** Preserve every `%<initials>` comment verbatim across edits, even when the surrounding text is rewritten. When an edit addresses one, say so and offer to delete it. The comment's authors decide.
 
-If you don't know which initials are the current user's, ask, or err on the side of preserving every `%<initials>` comment. Plain `%` comments without initials (TODO notes, section markers, etc.) may be edited or removed normally.
+Plain `%` comments without initials (TODO notes, section markers, etc.) may be edited or removed normally.

@@ -13,8 +13,10 @@ reconstruct the rules from memory, from this file, or from `misc/writing_with_er
 These apply to every edit, whether or not that agent is invoked:
 
 - One sentence per line in the TeX source. Preserve it.
-- Never use em-dashes (`---`). Use a separate sentence, a parenthetical, a colon, or a comma.
-- Never remove or modify a `%` comment tagged with someone else's initials (`%EM`, `%JH`, ...).
+- Use an em-dash only when every alternative is less elegant (machine-written prose overuses them).
+- Never remove or modify an initialed `%` comment (`%EM`, `%JH`, ...) yourself. When an edit addresses one, say so and offer to delete it. The comment's authors decide.
+
+For live line-by-line editing with the author, use /bip-edit.
 
 Background reading, not the operative rules: `misc/writing_with_erick.md` and the
 [writing_with_erick wiki page](https://github.com/matsengrp/wiki/wiki/writing_with_erick).
