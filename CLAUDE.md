@@ -67,6 +67,8 @@ operative style.
 - `make cleanall` - Remove all generated files
 - `make help` - Show available targets
 
+**Check for a running watcher before building.** Run `pgrep -fl 'latexmk -pvc'` and, for each PID, `lsof -a -p <PID> -d cwd -Fn` to see whether one is watching this directory. If one is, don't run `make pdf`, `latexmk` or `make clean`: a second build races the watcher and corrupts the aux files, and `make clean` can stop it. Wait for the watcher to rebuild, then check `main.log` for `undefined` and `^!` lines. Only build yourself when no watcher is running here.
+
 ### GitHub Actions
 The repository automatically builds PDFs on push/PR and uploads them as artifacts with 30-day retention, making it easy for collaborators to review without local LaTeX installation.
 
